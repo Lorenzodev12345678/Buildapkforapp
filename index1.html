@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lore Studio v2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header style="text-align: center; margin-bottom: 30px;">
+        <h1 style="color: #00d2ff;">Lore Studios</h1>
+        <p style="color: #666;">APK Generator Expert</p>
+    </header>
+
+    <div class="photo-zone" id="trigger">
+        <span id="textInfo">Toque para selecionar ícone</span>
+        <img id="imgPreview">
+    </div>
+    <input type="file" id="hiddenInput" hidden accept="image/*">
+
+    <label>Nome do Projeto:</label>
+    <input type="text" id="nameInput" class="input-field" placeholder="Ex: Meu App Vip">
+
+    <label>URL de Destino:</label>
+    <input type="url" id="urlInput" class="input-field" placeholder="https://site.com">
+
+    <div class="progress-container" id="pBox">
+        <p id="labelStatus" style="font-size: 14px; margin-bottom: 8px;">Processando...</p>
+        <div class="progress-track">
+            <div class="progress-bar" id="pBar"></div>
+        </div>
+    </div>
+
+    <button class="btn-action btn-build" onclick="initGenerator()">Gerar Build</button>
+
+    <div id="finalSection" style="display:none; text-align: center; margin-top: 20px;">
+        <p style="color: #4caf50;">Build Concluída!</p>
+        <a id="downloadLink" href="#" style="color: #fff; text-decoration: underline; display: block; margin-top: 10px;">Baixar Arquivo .apk</a>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
